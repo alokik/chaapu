@@ -6,6 +6,11 @@ gem 'rails', '4.0.2'
 # Use Haml for rendering views
 gem 'haml', '4.0.5'
 
+# User login system
+gem 'devise', '3.2.4'
+#fontawesome
+gem 'font-awesome-rails', '4.0.3.1'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
