@@ -1,0 +1,42 @@
+
+/* global */
+#footer{
+	margin-top:0px;
+}
+
+
+
+/* Landing Page */
+
+
+#landing-page-cont{
+	background-image:url('landing-bck.jpg');
+	min-height:425px;
+	margin-bottom:0px;
+}
+
+#landing-page-cont > .overlay-landing {
+    z-index: 1;
+    min-height:425px;
+    background: rgba(0, 0, 0, 0.5); /*can be anything, of course*/
+}
+#landing-content-cont{
+	z-index:2;
+	color:white;
+}
+.city-btn-landing{
+	min-width:120px;
+}
+
+/* Home Page */
+#home-top-cont{
+	background-image:url('landing-bck.jpg');
+	min-height:200px;
+	margin-bottom:0px;
+}
+
+#home-top-cont > .overlay-home {
+    z-index: 1;
+    min-height:200px;
+    background: rgba(0, 0, 0, 0.6); /*can be anything, of course*/
+}
