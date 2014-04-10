@@ -11,10 +11,12 @@
  *= require_self
  *= require unify/style.css
  *= require unify/header1.css
+ *= require unify/header1-orange.css
  *= require unify/responsive.css
  *= require unify/font-awesome.css
  *= require unify/flexslider.css
  *= require unify/jquery.bxslider.css
  *= require unify/layerslider.css
+ *= require font-awesome
  *= require_tree .
  */

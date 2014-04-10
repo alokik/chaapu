@@ -1,14 +1,13 @@
 Chaapu::Application.routes.draw do
-
-  root to:"static_pages#home"
+  
+  devise_for :users
+  root 'static_pages#index'
   resources :cities
   resources :outlets
   resources :foods
   resources :cuisines
 
   match '/search', to: 'cities#index', via: 'get'
-
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
