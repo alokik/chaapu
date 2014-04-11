@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= requrire unify/jquery.fancybox.js
+//= require manifest
 //= require_tree .
