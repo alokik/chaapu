@@ -12,6 +12,8 @@ Chaapu::Application.routes.draw do
 
   match '/search', to: 'cities#index', via: 'get'
 
+  match '/user_show', to: 'static_pages#user_show', via: 'get',as: "user_show"
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
