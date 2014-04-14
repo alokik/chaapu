@@ -1,0 +1,70 @@
+.row{id:'home-top-cont'}
+	.col-md-12.overlay-home
+		.row
+			.col-md-10.col-md-offset-1
+				.margin-bottom-20
+				.panel
+					.panel-heading
+						.text-center
+							%h2
+								Welcome Alok				
+					.panel-body
+						%p.text-center
+							"This is my testimonial. I am a real foodie, who always just thinks about food. I am born to eat and just being awesome."
+.row
+	.margin-bottom-20
+	.col-md-10.col-md-offset-1
+		.panel.panel-default
+			.panel-heading
+				.text-center
+					%strong Current status
+			.panel-body
+				.row
+					.col-md-4
+						.text-center
+							Karma Earned - 120 
+					.col-md-4
+						.text-center
+							Dishes Recommend - 30
+					.col-md-4
+						.text-center
+							Dishes Discovered - 10
+.row	
+	.col-md-3.col-md-offset-1
+	.col-md-7
+		.row
+			.col-md-4
+				.thumbnails.thumbnail-style
+					%a.fancybox-button.zoomer{"data-rel" => "fancybox-button", href: "#{image_path('dish1.jpg')}", title: "Project #1"}
+						%span.overlay-zoom
+							=image_tag('dish1.jpg', class: 'img-responsive')
+							.zoom-icon
+					.caption
+						%h3
+							%a.hover-effect{href: "#"} Project One
+						%p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.
+			.col-md-4
+				.thumbnails.thumbnail-style
+					%a.fancybox-button.zoomer{"data-rel" => "fancybox-button", href: "#{image_path('dish2.jpg')}", title: "Project #2"}
+						%span.overlay-zoom
+							=image_tag('dish2.jpg', class: 'img-responsive')
+							.zoom-icon
+					.caption
+						%h3
+							%a.hover-effect{href: "#"} Project Two
+						%p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.
+			.col-md-4
+				.thumbnails.thumbnail-style
+					%a.fancybox-button.zoomer{"data-rel" => "fancybox-button", href: "#{image_path('dish3.jpg')}", title: "Project #2"}
+						%span.overlay-zoom
+							=image_tag('dish3.jpg', class: 'img-responsive')
+							.zoom-icon
+					.caption
+						%h3
+							%a.hover-effect{href: "#"} Project Two
+						%p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.
+:javascript
+	jQuery(document).ready(function() {
+		App.init();
+		App.initFancybox();        
+	});

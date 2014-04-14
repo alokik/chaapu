@@ -9,13 +9,16 @@
 							%h2
 								Help Others Find Great Dishes				
 					.panel-body
-						%form.form-inline.text-center
+						= form_tag add_food_path, class: 'form-inline text-center' do 
 							.form-group
-								%input.form-control{type:"text", placeholder:'Name of Dish'}
+								= text_field_tag :nod,'', class: 'form-control',placeholder:'Name of Dish'
 							.form-group
-								%input.form-control{type:"text", placeholder:'Available at (Restaurant name,city'}
+								= text_field_tag :outlet_id,'', class: "form-control", placeholder:'Found at ?'
 							.form-group
-								%input.form-control{type:"text", placeholder:'Description'}
+								= text_field_tag :des,'', class: 'form-control', placeholder: 'Why did you like it?'
+							.form-group
+								=submit_tag 'Add',class: 'btn btn-success'
+						
 .row
 	.margin-bottom-20
 	.col-md-3.col-md-offset-1

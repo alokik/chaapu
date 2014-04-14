@@ -5,6 +5,7 @@ Chaapu::Application.routes.draw do
 
   match '/home', to: 'static_pages#home', via: 'get'
 
+  resources :users
   resources :cities
   resources :outlets
   resources :foods
@@ -14,7 +15,7 @@ Chaapu::Application.routes.draw do
 
   match '/user_show', to: 'static_pages#user_show', via: 'get',as: "user_show"
 
-
+  post 'add_food', to: 'foods#add_food'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
