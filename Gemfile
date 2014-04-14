@@ -12,7 +12,7 @@ gem 'devise', '3.2.4'
 gem 'font-awesome-rails', '4.0.3.1'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -52,3 +52,5 @@ gem 'annotate', '~> 2.6.3'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'pg'
+gem 'thinking-sphinx', '~> 3.1.0'
