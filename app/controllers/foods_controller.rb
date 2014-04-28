@@ -12,4 +12,10 @@ class FoodsController < ApplicationController
 		redirect_to :back
 	end
 
+	def index
+
+		@foods = Food.search (params[:query])
+
+	end 
+
 end
