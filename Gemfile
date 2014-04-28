@@ -12,7 +12,7 @@ gem 'devise', '3.2.4'
 gem 'font-awesome-rails', '4.0.3.1'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
 
 # Using google recpatcha
 gem 'recaptcha', '0.3.6'
@@ -25,6 +25,10 @@ gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
+
+
+## for better errors
+gem 'better_errors', '~> 1.1.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -59,3 +63,6 @@ gem 'annotate', '~> 2.6.3'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'pg'
+gem 'mysql2'
+gem 'thinking-sphinx', '~> 3.1.0'

@@ -12,11 +12,11 @@ Chaapu::Application.routes.draw do
   resources :foods
   resources :cuisines
 
-  match '/search', to: 'cities#index', via: 'get'
+  match '/search',    to: 'foods#index', via: 'post'
 
   match '/user_show', to: 'static_pages#user_show', via: 'get',as: "user_show"
 
-  post 'add_food', to: 'foods#add_food'
+  post 'add_food',    to: 'foods#add_food'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

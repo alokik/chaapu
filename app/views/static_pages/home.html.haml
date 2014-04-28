@@ -1,3 +1,7 @@
+=form_tag search_path do 
+	=label_tag :query
+	=text_field_tag :query
+
 .row{id:'home-top-cont'}
 	.col-md-12.overlay-home
 		.row
@@ -34,12 +38,12 @@
 				%strong
 					Find Specific dish from our database
 			.panel-body
-				%form.form-horizontal
+				=form_tag search_path class: 'form-horizontal' do 
 					.form-group
 						%label.col-md-6.control-label
 							Find Great dishes at an outlet
 						.col-md-6
-							%input.form-control{type:'text'}
+							=text_field :query, '', class: 'form-control'
 					.form-group
 						%label.col-md-6.control-label
 							Find Best outlet to have a dish
@@ -47,7 +51,7 @@
 							%input.form-control{type:'text'}
 					.form-group
 						.col-md-3.col-md-offset-6
-							%input.btn.btn-default.form-control{type:'submit'}
+							=submit_tag :submit, class: 'btn btn-default form-control'
 								
 .row	
 	.col-md-3.col-md-offset-1
