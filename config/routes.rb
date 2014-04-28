@@ -1,6 +1,7 @@
 Chaapu::Application.routes.draw do
   
-  devise_for :users
+  devise_for :users,  controllers: { registrations: "registrations" }
+
   root 'static_pages#index'
 
   match '/home', to: 'static_pages#home', via: 'get'

@@ -1,15 +1,8 @@
-.top
-  .container
-    %ul.loginbar.pull-right
-      %li.devider
-      %li
-        %a{href: "page_faq.html"} FAQ
-      %li
-        
+
 / /top
 / === End Top ===
 / === Header ===
-.header
+.header{id: 'header'}
   .navbar.navbar-default{role: "navigation"}
     .container
       / Brand and toggle get grouped for better mobile display
@@ -27,6 +20,10 @@
           %li.dropdown
             %a.dropdown-toggle{"data-close-others" => "false", "data-delay" => "0", "data-hover" => "dropdown",  href: home_path}
               Home
+          %li
+            -if !user_signed_in?
+              = link_to "Sign Up", new_user_registration_path
+
           %li
             - if user_signed_in?
               =link_to "My Account",current_user 
