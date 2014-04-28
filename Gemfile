@@ -27,8 +27,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 
-## for better errors
-gem 'better_errors', '~> 1.1.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -43,6 +41,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 group :development do 
+  #For better errors, yes brilliant comment as if the name means anything else
+  gem 'better_errors', '~> 1.1.0'
+  
   #for pre-viewing emails
   gem "letter_opener"
 end
