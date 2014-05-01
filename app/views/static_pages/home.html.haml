@@ -43,12 +43,12 @@
 						%label.col-md-6.control-label
 							Find Great dishes at an outlet
 						.col-md-6
-							=text_field :query, '', class: 'form-control'
+							=text_field :query1, '', class: 'form-control'
 					.form-group
 						%label.col-md-6.control-label
 							Find Best outlet to have a dish
 						.col-md-6
-							%input.form-control{type:'text'}
+							=text_field :query2, '', class: 'form-control'
 					.form-group
 						.col-md-3.col-md-offset-6
 							=submit_tag :submit, class: 'btn btn-default form-control'
