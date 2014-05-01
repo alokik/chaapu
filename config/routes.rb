@@ -4,13 +4,15 @@ Chaapu::Application.routes.draw do
 
   root 'static_pages#index'
 
-  match '/home', to: 'static_pages#home', via: 'get'
 
   resources :users
   resources :cities
   resources :outlets
-  resources :foods
+  resources :foods do
+    get :autocomplete_outlet_name, :on => :collection
+  end
   resources :cuisines
+
 
   match '/search',    to: 'foods#index', via: 'post'
 

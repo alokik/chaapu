@@ -1,5 +1,6 @@
 class FoodsController < ApplicationController
-
+  
+  autocomplete :outlet, :name, :full=> true
 	def add_food
 		name = params[:nod]
 		outlet_id = params[:outlet_id]

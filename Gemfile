@@ -11,6 +11,9 @@ gem 'devise', '3.2.4'
 #fontawesome
 gem 'font-awesome-rails', '4.0.3.1'
 
+#for autocomplete
+gem 'rails4-autocomplete'
+
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 
@@ -34,6 +37,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+# Use jquery-ui for front-end jquery lib
+gem 'jquery-ui-rails', '~> 4.2.1' 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
