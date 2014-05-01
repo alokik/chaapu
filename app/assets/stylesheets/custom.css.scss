@@ -1,10 +1,14 @@
 
+
 /* global */
+
+#header{
+	background-color:white;	
+}
+
 #footer{
 	margin-top:0px;
 }
-
-
 
 /* Landing Page */
 
@@ -29,6 +33,9 @@
 }
 
 /* Home Page */
+#home-pg-main-cnt{
+	background-color:white;
+}
 #home-top-cont{
 	background-image:url('landing-bck.jpg');
 	min-height:200px;
@@ -39,4 +46,9 @@
     z-index: 1;
     min-height:200px;
     background: rgba(0, 0, 0, 0.6); /*can be anything, of course*/
+}
+
+/* Registration Page */
+#reg-page-cont{
+	background-color:white;
 }

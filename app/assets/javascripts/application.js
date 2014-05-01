@@ -12,7 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.autocomplete
 //= require turbolinks
 //= requrire unify/jquery.fancybox.js
 //= require manifest
+//= require autocomplete-rails
 //= require_tree .

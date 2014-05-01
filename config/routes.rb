@@ -2,16 +2,18 @@ Chaapu::Application.routes.draw do
   
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  devise_for :users
-  root 'static_pages#index'
+  devise_for :users,  controllers: { registrations: "registrations" }
 
-  match '/home', to: 'static_pages#home', via: 'get'
+  root 'static_pages#index'
 
   resources :users
   resources :cities
   resources :outlets
-  resources :foods
+  resources :foods do
+    get :autocomplete_outlet_name, :on => :collection
+  end
   resources :cuisines
+
 
   match '/search',    to: 'foods#index', via: 'post'
 

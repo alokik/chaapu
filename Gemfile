@@ -11,8 +11,14 @@ gem 'devise', '3.2.4'
 #fontawesome
 gem 'font-awesome-rails', '4.0.3.1'
 
+#for autocomplete
+gem 'rails4-autocomplete'
+
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
+
+# Using google recpatcha
+gem 'recaptcha', '0.3.6'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -24,8 +30,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 
-## for better errors
-gem 'better_errors', '~> 1.1.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -33,12 +37,21 @@ gem 'better_errors', '~> 1.1.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+# Use jquery-ui for front-end jquery lib
+gem 'jquery-ui-rails', '~> 4.2.1' 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+group :development do 
+  #For better errors, yes brilliant comment as if the name means anything else
+  gem 'better_errors', '~> 1.1.0'
+  
+  #for pre-viewing emails
+  gem "letter_opener"
+end
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

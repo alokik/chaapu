@@ -15,13 +15,33 @@
 #  last_sign_in_ip        :string(255)
 #  created_at             :datetime
 #  updated_at             :datetime
+#  confirmation_token     :string(255)
+#  confirmed_at           :datetime
+#  confirmation_sent_at   :datetime
+#  username               :string(255)
 #
 
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
-
+         :recoverable, :rememberable, :trackable, :validatable, :confirmable, :authentication_keys => [:login]
+  
+  attr_accessor :login
+	
+	validates :username,
+	  :uniqueness => {
+	    :case_sensitive => false
+	  }
   has_many :foods
+
+	def self.find_first_by_auth_conditions(warden_conditions)
+	  conditions = warden_conditions.dup
+	  if login = conditions.delete(:login)
+	    where(conditions).where(["lower(username) = :value OR lower(email) = :value", { :value => login.downcase }]).first
+	  else
+	    where(conditions).first
+	  end
+	end
+
 end
