@@ -20,5 +20,5 @@
  *= require font-awesome
  *= require manifest
  *= require jquery.ui.autocomplete
- *= require_tree .
+ *= require custom
  */

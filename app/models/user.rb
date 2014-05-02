@@ -15,10 +15,11 @@
 #  last_sign_in_ip        :string(255)
 #  created_at             :datetime
 #  updated_at             :datetime
+#  username               :string(255)
 #  confirmation_token     :string(255)
 #  confirmed_at           :datetime
 #  confirmation_sent_at   :datetime
-#  username               :string(255)
+#  unconfirmed_email      :string(255)
 #
 
 class User < ActiveRecord::Base
@@ -34,7 +35,8 @@ class User < ActiveRecord::Base
 	    :case_sensitive => false
 	  }
   has_many :foods
-
+  has_many :reviews
+  
 	def self.find_first_by_auth_conditions(warden_conditions)
 	  conditions = warden_conditions.dup
 	  if login = conditions.delete(:login)

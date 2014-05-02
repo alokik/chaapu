@@ -18,7 +18,8 @@ class Food < ActiveRecord::Base
 	belongs_to :outlet
 	belongs_to :user
 	belongs_to :cuisine
-
+	has_many :reviews
+	
 	def self.add_food(user, name, outlet_id, description, price, vegnonveg, cuisine_id)
 		f = user.foods.new
 		f.name = name
@@ -28,7 +29,7 @@ class Food < ActiveRecord::Base
 		f.vegnonveg = vegnonveg
 		f.cuisine_id = cuisine_id
 		if f.save 
-			return true
+			return true,f
 		else
 			return false
 		end

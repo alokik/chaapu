@@ -1,7 +1,4 @@
 #home-pg-main-cnt
-	=form_tag search_path do 
-		=label_tag :query
-		=text_field_tag :query
 	.row{id:'home-top-cont'}
 		.col-md-12.overlay-home
 			.row
@@ -87,11 +84,6 @@
 							%h3
 								%a.hover-effect{href: "#"} Project Two
 							%p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.
-:javascript
-	jQuery(document).ready(function() {
-		App.init();
-		App.initFancybox();        
-	});
 =form_tag search_path do 
 	=label_tag :query
 	=text_field_tag :query
@@ -104,3 +96,9 @@
 			=label_tag 'Outlet'
 			=autocomplete_field_tag 'outlet', '', autocomplete_outlet_name_foods_path, :size => 75
 			
+
+:javascript
+	jQuery(document).ready(function() {
+		App.init();
+		App.initFancybox();        
+	});
