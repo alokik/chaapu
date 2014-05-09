@@ -20,9 +20,7 @@ class FoodsController < ApplicationController
 	end
 
 	def index
-
 		@foods = Food.search (params[:query])
-
 	end 
 
 	private 

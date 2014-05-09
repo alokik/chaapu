@@ -8,18 +8,19 @@
 						.panel-heading
 							.text-center
 								%h2
-									Help Others Find Great Dishes				
+									Find great dishes				
 						.panel-body
-							= form_tag add_food_path, class: 'form-inline text-center' do 
-								.form-group
-									= text_field_tag :nod,'', class: 'form-control',placeholder:'Name of Dish'
-								.form-group
-									= text_field_tag :outlet_id,'', class: "form-control", placeholder:'Found at ?'
-								.form-group
-									= text_field_tag :des,'', class: 'form-control', placeholder: 'Why did you like it?'
-								.form-group
-									=submit_tag 'Add',class: 'btn btn-success'
-							
+							.row
+								=form_tag search_path, class: 'form-horizontal' do 
+									.form-group
+										%label.col-md-4.control-label
+											Find Great dishes at an outlet
+										.col-md-6
+											=text_field :query, '', class: 'form-control'
+									.form-group
+										.col-md-4.col-md-offset-4
+											=submit_tag 'Search', class: 'btn btn-default form-control'
+
 	.row
 		.margin-bottom-20
 		.col-md-3.col-md-offset-1
@@ -29,29 +30,7 @@
 				.panel-body
 					%p
 						Current Status: Ninja Recruit
-		.col-md-7
-			.panel.panel-default
-				.panel-heading.text-center
-					%strong
-						Find Specific dish from our database
-				.panel-body
-					=form_tag search_path class: 'form-horizontal' do 
-						.form-group
-							%label.col-md-6.control-label
-								Find Great dishes at an outlet
-							.col-md-6
-								=text_field :query, '', class: 'form-control'
-						.form-group
-							%label.col-md-6.control-label
-								Find Best outlet to have a dish
-							.col-md-6
-								%input.form-control{type:'text'}
-						.form-group
-							.col-md-3.col-md-offset-6
-								=submit_tag :submit, class: 'btn btn-default form-control'
-									
-	.row	
-		.col-md-3.col-md-offset-1
+	
 		.col-md-7
 			.row
 				.col-md-4
